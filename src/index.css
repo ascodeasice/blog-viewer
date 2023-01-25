@@ -1,5 +1,8 @@
 :root {
-  --red: #E84545;
+  --red: #F05454;
+  --blue: #6A7EFC;
+  --black: #121212;
+  --white: #F5F5F5;
 }
 
 body {
@@ -9,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: var(--black);
 }
 
 code {
@@ -17,8 +20,12 @@ code {
     monospace;
 }
 
+a {
+  color: var(--blue);
+}
+
 .header {
-  background-color: #E84545;
+  background-color: var(--red);
   padding: 20px;
 }
 
@@ -32,15 +39,24 @@ code {
 }
 
 .postBlock {
-  background-color: white;
+  background-color: var(--white);
   border-radius: 5px;
   padding: 10px;
   padding-top: 0px;
 }
 
 .postBlock>.postText {
-  max-height: 300px;
+  height: 300px;
+  padding: 5px;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   white-space: break-spaces;
+  border: 2px solid grey;
+}
+
+.postBlock>.postTitle {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-block-start: 15px;
 }

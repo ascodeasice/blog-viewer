@@ -1,8 +1,12 @@
 const PostBlock = ({ post }) => {
     return <div className="postBlock">
-        <h2>{post.title}</h2>
+        <a className="postTitle" href={`/post/${post._id}`}>{post.title}</a>
         <p className="postText">{post.text}</p>
-        <p>By {post.author.username}</p>
+        <p>{"By "}
+            <a href={`/users/${post.author._id}`}>
+                {post.author.username}
+            </a>
+        </p>
     </div>
 }
 
