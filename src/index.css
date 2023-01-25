@@ -13,6 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
+  padding-bottom: 30px;
 }
 
 code {
@@ -84,18 +85,29 @@ a {
   margin-block-start: 15px;
 }
 
-.userInfoContainer {
+.userInfoContainer,
+.postContent {
   display: grid;
   margin: 20px;
   grid-template-rows: min-content 1fr min-content;
   row-gap: 10px;
 }
 
-.userInfoContainer>.bioContainer {
+.userInfoContainer>.userName,
+.postContent>.title {
+  color: var(--white);
+  margin-left: 30px;
+}
+
+.userInfoContainer>.bio,
+.postContent>.postText {
   background-color: var(--white);
   border-radius: 10px;
-  padding: 10px;
+  padding: 30px;
   min-height: 50vh;
+  white-space: break-spaces;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .linkButton {
@@ -105,9 +117,41 @@ a {
   background-color: var(--red);
   color: var(--white);
   border: none;
+  margin-left: 30px;
 }
 
 .linkButton:hover {
   background-color: var(--blue);
   color: var(--white);
+}
+
+.postContent>.authorName {
+  color: var(--white);
+  margin-left: 10px;
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.commentList {
+  display: grid;
+  margin: 20px;
+  row-gap: 10px;
+}
+
+.commentBlock {
+  background-color: var(--white);
+  width: max(280px, 60vw);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.commentBlock>.authorName {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.commentBlock>.text {
+  white-space: break-spaces;
+  line-height: 20px;
 }

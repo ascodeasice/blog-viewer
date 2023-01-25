@@ -16,17 +16,14 @@ const UserPage = () => {
         <>
             <Header />
             <div className="userInfoContainer">
-                <h1 style={{ color: "white" }}>
+                <h1 className="userName">
                     {user == null ? "Loading..." : user.username}
                 </h1>
-                <div className="bioContainer">
-
-                    <p>
-                        {user == null ? "Loading..." : user.bio}
-                    </p>
-                </div>
-                <a href="/"><button className="linkButton">Home Page</button></a>
+                <p className="bio">
+                    {user == null ? "Loading..." : user.bio}
+                </p>
             </div>
+            <a href="/"><button className="linkButton">Home Page</button></a>
         </>
     );
 }
