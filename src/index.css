@@ -27,6 +27,29 @@ a {
 .header {
   background-color: var(--red);
   padding: 20px;
+  display: flex;
+}
+
+.header>h1>a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.header>h1>a:hover {
+  color: var(--blue);
+}
+
+.header>a {
+  align-self: center;
+}
+
+.header>a>.githubLogo {
+  width: 50px;
+}
+
+.header>a>.githubLogo:hover {
+  /* become blue when hovering github logo */
+  filter: invert(42%) sepia(44%) saturate(827%) hue-rotate(195deg) brightness(113%) contrast(98%);
 }
 
 .postContainer {
@@ -41,7 +64,7 @@ a {
 .postBlock {
   background-color: var(--white);
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   padding-top: 0px;
 }
 
@@ -59,4 +82,32 @@ a {
   font-weight: bold;
   font-size: 1.5rem;
   margin-block-start: 15px;
+}
+
+.userInfoContainer {
+  display: grid;
+  margin: 20px;
+  grid-template-rows: min-content 1fr min-content;
+  row-gap: 10px;
+}
+
+.userInfoContainer>.bioContainer {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 50vh;
+}
+
+.linkButton {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+}
+
+.linkButton:hover {
+  background-color: var(--blue);
+  color: var(--white);
 }

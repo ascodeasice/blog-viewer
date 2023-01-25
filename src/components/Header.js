@@ -1,7 +1,12 @@
+import Github from '../logo/github.svg';
+
 const Header = () => {
     return (
         <div className="header">
-            <h1>Ascodeasice Blog</h1>
+            <a href="https://github.com/ascodeasice/blog-viewer">
+                <img className='githubLogo' src={Github} />
+            </a>
+            <h1><a href="/">ascodeasice's Blog</a></h1>
         </div>
     );
 }
