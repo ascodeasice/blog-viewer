@@ -1,3 +1,7 @@
+:root {
+  --red: #E84545;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,38 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header {
+  background-color: #E84545;
+  padding: 20px;
+}
+
+.postContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(min-fit, min-content);
+  row-gap: 10px;
+  column-gap: 10px;
+  margin: 20px;
+}
+
+.postBlock {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.postBlock>.postText {
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  white-space: break-spaces;
 }
