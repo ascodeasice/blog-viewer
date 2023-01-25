@@ -155,3 +155,50 @@ a {
   white-space: break-spaces;
   line-height: 20px;
 }
+
+.noteText {
+  margin-left: 30px;
+  color: var(--white);
+  font-size: 20px;
+}
+
+.commentForm {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-auto-rows: min-content;
+  row-gap: 20px;
+  column-gap: 10px;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.commentForm>input {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.commentForm>textarea {
+  width: max(280px, 60vw);
+  padding: 5px;
+  height: 100px;
+  resize: vertical;
+}
+
+.commentForm>.submitButton {
+  grid-column: 2/-1;
+  margin: 0;
+}
+
+.errorMessage {
+  color: var(--red);
+}
+
+.commentBlock>.commentTime {
+  font-size: 12px;
+}

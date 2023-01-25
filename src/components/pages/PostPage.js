@@ -17,7 +17,11 @@ const PostPage = () => {
 
         fetch(`https://blog-api-ascodeasice.up.railway.app/posts/${postId}/comments`)
             .then(response => response.json())
-            .then(response => setComments(response));
+            .then(response => {
+                // sort by creation time
+                response.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                setComments(response);
+            })
     }, []);
 
 
