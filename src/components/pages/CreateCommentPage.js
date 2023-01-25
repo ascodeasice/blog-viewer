@@ -1,6 +1,6 @@
 import Header from "../Header";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 const uniqid = require("uniqid");
 
 const CreateCommentPage = () => {
@@ -48,8 +48,8 @@ const CreateCommentPage = () => {
             <>
                 <Header />
                 <p className="noteText">Comment Created</p>
-                <a href={`/posts/${postId}`}><button className="linkButton">Go to Post</button></a>
-                <a href={`/`}><button className="linkButton">Home Page</button></a>
+                <a href={`/blog-viewer/posts/${postId}`}><button className="linkButton">Go to Post</button></a>
+                <a href={`/blog-viewer`}><button className="linkButton">Home Page</button></a>
             </>
         );
     } else {

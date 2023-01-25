@@ -37,10 +37,10 @@ const PostPage = () => {
                 </p>
                 <p className="authorName">{"By "}<a href={post == null ? "#" : `/users/${post.author._id}`}>{post == null ? "Loading..." : post.author.username}</a></p>
             </div>
-            <a href="/">
+            <a href="/blog-viewer">
                 <button className="linkButton">Home Page</button>
             </a>
-            <a href={`/posts/${postId}/comments`}>
+            <a href={`/blog-viewerposts/${postId}/comments`}>
                 <button className="linkButton">Comment</button>
             </a>
 

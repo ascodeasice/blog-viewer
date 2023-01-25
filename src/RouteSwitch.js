@@ -6,7 +6,7 @@ import CreateCommentPage from "./components/pages/CreateCommentPage";
 
 const RouteSwitch = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="blog-viewer">
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/users/:userId" element={<UserPage />} />

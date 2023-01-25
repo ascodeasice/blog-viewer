@@ -23,7 +23,7 @@ const UserPage = () => {
                     {user == null ? "Loading..." : user.bio}
                 </p>
             </div>
-            <a href="/"><button className="linkButton">Home Page</button></a>
+            <a href="/blog-viewer"><button className="linkButton">Home Page</button></a>
         </>
     );
 }

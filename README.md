@@ -10,6 +10,6 @@ This website uses the blog API I wrote in another repo. It is a frontend website
 ![](./public/images/post.png)
 
 # Link
-[Live Preview](#)
+[Live Preview](https://ascodeasice.github.io/blog-viewer/)
 
 NOTE: The link might not work because of backend hosting 
