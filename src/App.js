@@ -12,7 +12,7 @@ function App() {
         return response.json();
       })
       .then(function (response) {
-        setPosts(response);
+        setPosts(response.filter(post => post.isPublic));
       });
   }, []);
 
@@ -20,7 +20,10 @@ function App() {
     <div className="App">
       <Header />
       <div className="postContainer">
-        {posts.map((post) => <PostBlock key={uniqid()} post={post} />)}
+        {posts.length == 0 ?
+          <p className="white">There's no posts</p>
+          : posts.map((post) => <PostBlock key={uniqid()} post={post} />)
+        }
       </div>
     </div >
   );

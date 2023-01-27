@@ -202,3 +202,7 @@ a {
 .commentBlock>.commentTime {
   font-size: 12px;
 }
+
+.white {
+  color: var(--white);
+}
