@@ -3,6 +3,7 @@ This website uses the blog API I wrote in another repo. It is a frontend website
 # Details
 - Use React.js frontend framework
 - Use [my blog API](https://github.com/ascodeasice/blog-api) made with Express.js and mongoDB
+- Use [react-markdown](https://github.com/remarkjs/react-markdown#use-a-plugin-with-options) for markdown text
 # Results
 ## Home Page
 ![](./public/images/home.png)

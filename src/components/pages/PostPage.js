@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CommentBlock from "../CommentBlock";
 import uniqid from "uniqid";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 const PostPage = () => {
     const [post, setPost] = useState(null);
@@ -32,9 +34,10 @@ const PostPage = () => {
                 <h1 className="title">
                     {post == null ? "Loading..." : post.title}
                 </h1>
-                <p className="postText">
+                <ReactMarkdown remarkPlugins={[[remarkGfm, { singleTilde: false }]]}
+                    className="markdown postText">
                     {post == null ? "Loading..." : post.text}
-                </p>
+                </ReactMarkdown>
                 <p className="authorName">{"By "}<a href={post == null ? "#" : `/blog-viewer/users/${post.author._id}`}>{post == null ? "Loading..." : post.author.username}</a></p>
             </div>
             <a href="/blog-viewer">

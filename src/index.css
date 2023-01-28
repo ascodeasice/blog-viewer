@@ -3,6 +3,9 @@
   --blue: #6A7EFC;
   --black: #121212;
   --white: #F5F5F5;
+  --codeBlockColor: #d5dfeb;
+  --quoteBlockColor: #f4deb5;
+
 }
 
 body {
@@ -19,6 +22,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  background-color: var(--codeBlockColor);
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+blockquote {
+  background-color: var(--quoteBlockColor);
+  padding: 5px;
+  border-radius: 5px;
+
 }
 
 a {
@@ -67,6 +81,20 @@ a {
   border-radius: 5px;
   padding: 20px;
   padding-top: 0px;
+}
+
+.postBlock>.markdown {
+  height: 300px;
+  padding: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: break-spaces;
+  border: 2px solid grey;
+  color: var(--black);
+}
+
+.markdown>* {
+  margin: 0;
 }
 
 .postBlock>.postText {
